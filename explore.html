@@ -1,38 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | AlecWorld</title>
+
+    <title>Explore | AlecWorld</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
 <header class="navbar">
-    <div class="logo">AlecWorld</div>
+
+    <a href="index.html" class="logo">
+
+        Alec<span>World</span>
+
+    </a>
 
     <nav>
+
         <a href="index.html">Home</a>
-        <a href="gallery.html" class="active">Gallery</a>
-        <a href="albums.html">Albums</a>
+
+        <a href="explore.html" class="active">Explore</a>
+
+        <a href="album.html">Albums</a>
+
         <a href="categories.html">Categories</a>
+
+        <a href="favourites.html">Favourites</a>
+
     </nav>
+
+    <div class="nav-right">
+
+        <input
+            type="search"
+            placeholder="Search photos..."
+            class="search-box"
+        >
+
+        <a href="login.html" class="login-btn">
+
+            Login
+
+        </a>
+
+    </div>
+
 </header>
 
+
+
+
+
 <section class="page-header">
-    <h1>Gallery</h1>
-    <p>Browse every photo.</p>
+
+    <h1>Explore Photos</h1>
+
+    <p>
+
+        Browse every photograph in the AlecWorld collection.
+
+    </p>
+
 </section>
 
-<section class="gallery-grid">
+
+
+
+
+<section class="gallery-filters">
+
+    <button class="filter active">
+
+        All
+
+    </button>
+
+    <button class="filter">
+
+        Nature
+
+    </button>
+
+    <button class="filter">
+
+        Portrait
+
+    </button>
+
+    <button class="filter">
+
+        Street
+
+    </button>
+
+    <button class="filter">
+
+        Travel
+
+    </button>
+
+    <button class="filter">
+
+        Events
+
+    </button>
+
+</section>
+
+
+
+
+
+<section class="gallery">
+
+<div class="gallery-grid">
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Golden Sunset</h3>
+
+<p>Nature</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Mountain View</h3>
+
+<p>Travel</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Night Lights</h3>
+
+<p>Street</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Forest Path</h3>
+
+<p>Nature</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Ocean Breeze</h3>
+
+<p>Travel</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>City Rush</h3>
+
+<p>Street</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Wedding Smile</h3>
+
+<p>Events</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Quiet Lake</h3>
+
+<p>Nature</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Morning Coffee</h3>
+
+<p>Lifestyle</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Rainy Road</h3>
+
+<p>Street</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Wild Adventure</h3>
+
+<p>Travel</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+<a href="image.html" class="gallery-card">
+
+<div class="gallery-image"></div>
+
+<div class="gallery-info">
+
+<h3>Happy Moments</h3>
+
+<p>Portrait</p>
+
+<div class="gallery-actions">
+
+<span>❤ Favourite</span>
+
+<span>⬇ Download</span>
+
+</div>
+
+</div>
+
+</a>
+
+</div>
 
 </section>
 
 <footer>
-    <p>© 2026 AlecWorld</p>
+
+<div class="footer-logo">
+
+Alec<span>World</span>
+
+</div>
+
+<p>
+
+Capture moments. Share memories.
+
+</p>
+
+<p>
+
+© 2026 AlecWorld. All Rights Reserved.
+
+</p>
+
 </footer>
 
+<script src="js/gallery.js"></script>
+
 </body>
+
+</html></body>
 </html>
