@@ -253,6 +253,35 @@
 
 }
 
+.album-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--border);
+
+    color:var(--muted);
+
+    font-size:.9rem;
+
+}
+
+.album-meta span{
+
+    transition:.3s;
+
+}
+
+.album-meta span:hover{
+
+    color:var(--primary);
+
+}
 /* Responsive */
 
 @media(max-width:900px){
