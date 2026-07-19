@@ -1,0 +1,275 @@
+/* ==========================================================
+   ALECWORLD
+   CATEGORY PAGE
+========================================================== */
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.category-hero{
+
+    width:min(92%,1200px);
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:350px 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+/* ===========================
+   CATEGORY BANNER
+=========================== */
+
+.category-banner{
+
+    height:350px;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:120px;
+
+    background:linear-gradient(
+        135deg,
+        #14532d,
+        #166534,
+        #22c55e
+    );
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.category-banner:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===========================
+   DETAILS
+=========================== */
+
+.category-details{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.category-details h1{
+
+    font-size:2.8rem;
+
+    margin:18px 0;
+
+}
+
+.category-details p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   BADGE
+=========================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    background:rgba(34,197,94,.15);
+
+    color:#22c55e;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.category-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.category-stats div{
+
+    background:#0b1120;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.category-stats div:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#22c55e;
+
+}
+
+.category-stats strong{
+
+    display:block;
+
+    font-size:2rem;
+
+    color:#22c55e;
+
+    margin-bottom:8px;
+
+}
+
+.category-stats span{
+
+    color:var(--muted);
+
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+
+    width:min(92%,1200px);
+
+    margin:70px auto 30px;
+
+}
+
+.section-title h2{
+
+    font-size:2rem;
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+
+    margin-bottom:100px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+    .category-hero{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .category-banner{
+
+        height:280px;
+
+        font-size:90px;
+
+    }
+
+    .category-details{
+
+        padding:25px;
+
+    }
+
+    .category-details h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .category-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .category-banner{
+
+        height:220px;
+
+        font-size:70px;
+
+    }
+
+    .category-details{
+
+        padding:20px;
+
+    }
+
+    .category-details h1{
+
+        font-size:1.8rem;
+
+    }
+
+}
