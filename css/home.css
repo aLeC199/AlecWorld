@@ -1,0 +1,288 @@
+/* ==========================================================
+   ALECWORLD
+   HOME PAGE
+========================================================== */
+
+/* ================= HERO ================= */
+
+.hero{
+
+    position:relative;
+
+    background:
+        linear-gradient(rgba(11,17,32,.75),rgba(11,17,32,.88)),
+        url("../assets/images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+.hero-overlay{
+
+    animation:fadeHero 1s ease;
+
+}
+
+.hero-tag{
+
+    font-weight:600;
+
+}
+
+.hero h1{
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+}
+
+.hero-btn{
+
+    margin-top:10px;
+
+}
+
+/* ================= STATS ================= */
+
+.stats{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.stat-card{
+
+    backdrop-filter:blur(10px);
+
+}
+
+.stat-card:hover{
+
+    background:#182233;
+
+}
+
+/* ================= FEATURED ================= */
+
+.featured{
+
+    padding-bottom:30px;
+
+}
+
+.photo-card{
+
+    background:#1b2738;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.photo-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.05),
+
+        rgba(0,0,0,.55)
+
+    );
+
+    z-index:1;
+
+}
+
+.photo-card::after{
+
+    content:"View Photo";
+
+    position:absolute;
+
+    left:20px;
+
+    bottom:20px;
+
+    color:white;
+
+    font-weight:600;
+
+    z-index:2;
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.photo-card:hover::after{
+
+    opacity:1;
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+}
+
+/* ================= ALBUM ================= */
+
+.album-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.album-card:nth-child(1){
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.4),
+
+        rgba(0,0,0,.5)
+
+    ),
+
+    url("../assets/images/album1.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.album-card:nth-child(2){
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.4),
+
+        rgba(0,0,0,.5)
+
+    ),
+
+    url("../assets/images/album2.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.album-card:nth-child(3){
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.4),
+
+        rgba(0,0,0,.5)
+
+    ),
+
+    url("../assets/images/album3.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.album-card:nth-child(4){
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.4),
+
+        rgba(0,0,0,.5)
+
+    ),
+
+    url("../assets/images/album4.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.album-card h3{
+
+    font-size:1.5rem;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.4);
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    margin-top:120px;
+
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeHero{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .hero{
+
+        background-attachment:scroll;
+
+    }
+
+    .hero h1{
+
+        font-size:2.6rem;
+
+    }
+
+    .hero-text{
+
+        width:100%;
+
+    }
+
+             }
