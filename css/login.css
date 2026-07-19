@@ -1,0 +1,212 @@
+/* ==========================================================
+   ALECWORLD
+   LOGIN PAGE
+========================================================== */
+
+/* ===========================
+   LOGIN SECTION
+=========================== */
+
+.login-section{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+}
+
+/* ===========================
+   LOGIN CARD
+=========================== */
+
+.login-card{
+
+    width:100%;
+
+    max-width:480px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.login-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:rgba(245,158,11,.15);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+}
+
+.login-card h1{
+
+    font-size:2.2rem;
+
+    margin-bottom:12px;
+
+}
+
+.login-card p{
+
+    color:var(--muted);
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.input-group{
+
+    text-align:left;
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+    background:#0b1120;
+
+    color:white;
+
+    outline:none;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+
+}
+
+.input-group input:focus{
+
+    border-color:var(--primary);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.login-card .btn{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:15px;
+
+    font-size:1rem;
+
+}
+
+/* ===========================
+   BACK LINK
+=========================== */
+
+.back-home{
+
+    margin-top:25px;
+
+}
+
+.back-home a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.back-home a:hover{
+
+    opacity:.8;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:600px){
+
+    .login-card{
+
+        padding:30px 22px;
+
+    }
+
+    .login-card h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .login-icon{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:36px;
+
+    }
+
+}
