@@ -1,11 +1,15 @@
-/* ===========================
-   GOOGLE FONT
-=========================== */
+/* ==========================================================
+   ALECWORLD
+   GLOBAL STYLES
+   PART 1
+========================================================== */
+
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* ===========================
+/* ==========================================================
    RESET
-=========================== */
+========================================================== */
 
 *{
     margin:0;
@@ -19,77 +23,80 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#0f172a;
-    color:#ffffff;
-    line-height:1.6;
+    background:#0b1120;
+    color:#f8fafc;
+    overflow-x:hidden;
 }
 
-/* ===========================
-   VARIABLES
-=========================== */
-
-:root{
-
-    --bg:#0f172a;
-    --card:#1e293b;
-    --accent:#38bdf8;
-    --text:#ffffff;
-    --muted:#94a3b8;
-    --border:#334155;
-
+img{
+    display:block;
+    width:100%;
 }
-
-/* ===========================
-   LINKS
-=========================== */
 
 a{
     text-decoration:none;
     color:inherit;
 }
 
-/* ===========================
-   IMAGES
-=========================== */
-
-img{
-    width:100%;
-    display:block;
+button,
+input{
+    font-family:'Poppins',sans-serif;
+    outline:none;
 }
 
-/* ===========================
-   BUTTONS
-=========================== */
+ul{
+    list-style:none;
+}
 
-.btn{
+/* ==========================================================
+   VARIABLES
+========================================================== */
 
-    display:inline-block;
+:root{
 
-    background:var(--accent);
+    --bg:#0b1120;
 
-    color:#fff;
+    --surface:#111827;
 
-    padding:14px 28px;
+    --surface-light:#1f2937;
 
-    border-radius:10px;
+    --border:#243041;
 
-    font-weight:600;
+    --primary:#f59e0b;
 
-    transition:.3s;
+    --primary-hover:#fbbf24;
+
+    --white:#ffffff;
+
+    --text:#e5e7eb;
+
+    --muted:#94a3b8;
+
+    --shadow:0 10px 40px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+    --container:1200px;
 
 }
 
-.btn:hover{
+/* ==========================================================
+   CONTAINER
+========================================================== */
 
-    transform:translateY(-3px);
+.container{
 
-    box-shadow:0 10px 30px rgba(56,189,248,.35);
+    width:min(92%,var(--container));
+
+    margin:auto;
 
 }
 
-/* ===========================
+/* ==========================================================
    NAVBAR
-=========================== */
+========================================================== */
 
 .navbar{
 
@@ -97,17 +104,21 @@ img{
 
     top:0;
 
+    left:0;
+
+    width:100%;
+
+    padding:18px 5%;
+
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
 
-    padding:18px 8%;
+    background:rgba(11,17,32,.75);
 
-    background:rgba(15,23,42,.85);
-
-    backdrop-filter:blur(14px);
+    backdrop-filter:blur(18px);
 
     border-bottom:1px solid var(--border);
 
@@ -117,11 +128,17 @@ img{
 
 .logo{
 
-    font-size:1.5rem;
+    font-size:1.7rem;
 
     font-weight:700;
 
-    color:var(--accent);
+    color:var(--white);
+
+}
+
+.logo span{
+
+    color:var(--primary);
 
 }
 
@@ -129,7 +146,7 @@ nav{
 
     display:flex;
 
-    gap:20px;
+    gap:28px;
 
 }
 
@@ -137,24 +154,583 @@ nav a{
 
     color:var(--muted);
 
-    transition:.3s;
+    font-size:.95rem;
+
+    transition:var(--transition);
+
+    position:relative;
 
 }
 
-nav a:hover,
+nav a:hover{
+
+    color:var(--white);
+
+}
+
 nav a.active{
 
-    color:var(--accent);
+    color:var(--primary);
 
 }
 
-/* ===========================
+nav a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:100%;
+
+    height:2px;
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+.search-box{
+
+    width:220px;
+
+    height:42px;
+
+    padding:0 18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--surface);
+
+    color:var(--white);
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+}
+
+.search-box::placeholder{
+
+    color:var(--muted);
+
+}
+
+.search-box:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(245,158,11,.15);
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.btn,
+.hero-btn,
+.login-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:#111;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn:hover,
+.hero-btn:hover,
+.login-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 30px rgba(245,158,11,.35);
+
+}
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.section-title{
+
+    width:min(92%,1200px);
+
+    margin:80px auto 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.section-title h2{
+
+    font-size:2rem;
+
+}
+
+.section-title a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.section-title a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.photo-grid,
+.album-grid{
+
+    width:min(92%,1200px);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+   PHOTO CARD
+========================================================== */
+
+.photo-card{
+
+    height:320px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ==========================================================
+   ALBUM CARD
+========================================================== */
+
+.album-card{
+
+    height:180px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.album-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+}
+
+.album-card h3{
+
+    color:var(--white);
+
+    font-size:1.4rem;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:100px;
+
+    padding:50px 5%;
+
+    text-align:center;
+
+    border-top:1px solid var(--border);
+
+    background:#09101d;
+
+}
+
+.footer-logo{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.footer-logo span{
+
+    color:var(--primary);
+
+}
+
+footer p{
+
+    color:var(--muted);
+
+    margin-top:10px;
+
+    font-size:.95rem;
+
+   }
+
+/* ==========================================================
+   ALECWORLD
+   GLOBAL STYLES
+   PART 2
+========================================================== */
+
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:100px 5%;
+
+    background:
+        linear-gradient(rgba(11,17,32,.72),rgba(11,17,32,.82)),
+        url("../assets/images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero-overlay{
+
+    width:min(100%,700px);
+
+    text-align:center;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:rgba(245,158,11,.12);
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    color:var(--white);
+
+}
+
+.hero-text{
+
+    max-width:620px;
+
+    margin:0 auto 35px;
+
+    color:var(--muted);
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+.hero-btn{
+
+    min-width:220px;
+
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.stats{
+
+    width:min(92%,1200px);
+
+    margin:-60px auto 90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.stat-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+}
+
+.stat-card h2{
+
+    color:var(--primary);
+
+    font-size:2.3rem;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:var(--muted);
+
+    font-size:1rem;
+
+}
+
+/* ==========================================================
+   FEATURED SECTION
+========================================================== */
+
+.featured{
+
+    margin-bottom:80px;
+
+}
+
+/* ==========================================================
+   PHOTO CARD PLACEHOLDER
+========================================================== */
+
+.photo-card{
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+.photo-card::before{
+
+    content:"Photo";
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.3rem;
+
+    color:var(--muted);
+
+    background:linear-gradient(
+        135deg,
+        #1f2937,
+        #111827
+    );
+
+}
+
+.photo-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.55),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:var(--transition);
+
+}
+
+.photo-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+   ALBUM CARD
+========================================================== */
+
+.album-card{
+
+    position:relative;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+}
+
+.album-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.2),
+        rgba(0,0,0,.65)
+    );
+
+}
+
+.album-card h3{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================================
    PAGE HEADER
-=========================== */
+========================================================== */
 
 .page-header{
 
-    padding:80px 8% 40px;
+    padding:120px 5% 70px;
 
     text-align:center;
 
@@ -162,9 +738,9 @@ nav a.active{
 
 .page-header h1{
 
-    font-size:2.5rem;
+    font-size:3rem;
 
-    margin-bottom:10px;
+    margin-bottom:15px;
 
 }
 
@@ -172,7 +748,241 @@ nav a.active{
 
     color:var(--muted);
 
+    font-size:1.05rem;
+
 }
 
-/* ===========================
-   CAR
+/* ==========================================================
+   IMAGE DETAILS
+========================================================== */
+
+.photo-details{
+
+    width:min(92%,1200px);
+
+    margin:100px auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+}
+
+.photo{
+
+    min-height:600px;
+
+    background:#1f2937;
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+}
+
+.details{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:30px;
+
+}
+
+.details h1{
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+
+}
+
+.details p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.details button{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#111;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.details button:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* ==========================================================
+   SIMPLE FADE ANIMATION
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero,
+.stats,
+.featured,
+.page-header,
+.photo-details{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* ==========================================================
+   ALECWORLD
+   GLOBAL STYLES
+   PART 3
+========================================================== */
+
+/* ==========================================================
+   LOGIN PAGE
+========================================================== */
+
+.login-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.login-card{
+
+    width:100%;
+    max-width:430px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.login-card h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:var(--muted);
+
+    margin-bottom:30px;
+
+}
+
+.login-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.login-card input{
+
+    height:50px;
+
+    padding:0 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0b1120;
+
+    border:1px solid var(--border);
+
+    color:var(--white);
+
+}
+
+.login-card button{
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#111;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.login-card button:hover
