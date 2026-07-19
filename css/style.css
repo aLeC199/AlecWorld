@@ -1,0 +1,178 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+/* ===========================
+   VARIABLES
+=========================== */
+
+:root{
+
+    --bg:#0f172a;
+    --card:#1e293b;
+    --accent:#38bdf8;
+    --text:#ffffff;
+    --muted:#94a3b8;
+    --border:#334155;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--accent);
+
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 30px rgba(56,189,248,.35);
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(15,23,42,.85);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    color:var(--accent);
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+nav a{
+
+    color:var(--muted);
+
+    transition:.3s;
+
+}
+
+nav a:hover,
+nav a.active{
+
+    color:var(--accent);
+
+}
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.page-header{
+
+    padding:80px 8% 40px;
+
+    text-align:center;
+
+}
+
+.page-header h1{
+
+    font-size:2.5rem;
+
+    margin-bottom:10px;
+
+}
+
+.page-header p{
+
+    color:var(--muted);
+
+}
+
+/* ===========================
+   CAR
