@@ -1,0 +1,220 @@
+/* ==========================================================
+   ALECWORLD
+   FAVOURITES PAGE
+========================================================== */
+
+/* ===========================
+   HERO
+=========================== */
+
+.favourites-hero{
+
+    width:min(92%,1200px);
+
+    margin:70px auto 40px;
+
+    text-align:center;
+
+}
+
+.favourites-hero h1{
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+}
+
+.favourites-hero p{
+
+    color:var(--muted);
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.favourite-stats{
+
+    width:min(92%,1200px);
+
+    margin:0 auto 60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ef4444;
+
+}
+
+.stat-card h2{
+
+    font-size:2.5rem;
+
+    color:#ef4444;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:var(--muted);
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+
+    width:min(92%,1200px);
+
+    margin:auto;
+
+    padding-bottom:90px;
+
+}
+
+/* ===========================
+   SAVED BADGE
+=========================== */
+
+.gallery-actions span:first-child{
+
+    color:#ef4444;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.empty-favourites{
+
+    width:min(92%,700px);
+
+    margin:80px auto;
+
+    text-align:center;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:60px 30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.empty-favourites h2{
+
+    margin:20px 0 10px;
+
+}
+
+.empty-favourites p{
+
+    color:var(--muted);
+
+    margin-bottom:25px;
+
+}
+
+.empty-favourites .emoji{
+
+    font-size:80px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .favourite-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .favourites-hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .stat-card{
+
+        padding:22px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:2rem;
+
+    }
+
+    .empty-favourites{
+
+        padding:40px 20px;
+
+    }
+
+    .empty-favourites .emoji{
+
+        font-size:60px;
+
+    }
+
+}
