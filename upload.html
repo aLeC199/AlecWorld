@@ -59,25 +59,22 @@
 
     <div class="page-header">
 
-        <div>
+        <h1>Upload Photo</h1>
 
-            <h1>Upload Photo</h1>
-
-            <p>Add a new photo to your gallery.</p>
-
-        </div>
+        <p>Add a new photo to your AlecWorld gallery.</p>
 
     </div>
 
-    <form class="upload-form">
+    <form id="uploadForm" class="upload-form">
 
         <div class="form-group">
 
-            <label>Photo Title</label>
+            <label for="title">Photo Title</label>
 
             <input
+                id="title"
                 type="text"
-                placeholder="Example: Beautiful Sunset"
+                placeholder="Beautiful Sunset"
                 required
             >
 
@@ -85,9 +82,10 @@
 
         <div class="form-group">
 
-            <label>Description</label>
+            <label for="description">Description</label>
 
             <textarea
+                id="description"
                 rows="5"
                 placeholder="Write something about this photo..."
             ></textarea>
@@ -98,17 +96,11 @@
 
             <div class="form-group">
 
-                <label>Album</label>
+                <label for="album">Album</label>
 
-                <select>
+                <select id="album">
 
-                    <option>Nature</option>
-
-                    <option>Travel</option>
-
-                    <option>Portrait</option>
-
-                    <option>Street</option>
+                    <option value="">Select Album</option>
 
                 </select>
 
@@ -116,17 +108,11 @@
 
             <div class="form-group">
 
-                <label>Category</label>
+                <label for="category">Category</label>
 
-                <select>
+                <select id="category">
 
-                    <option>Landscape</option>
-
-                    <option>Wildlife</option>
-
-                    <option>Architecture</option>
-
-                    <option>People</option>
+                    <option value="">Select Category</option>
 
                 </select>
 
@@ -136,19 +122,18 @@
 
         <div class="form-group">
 
-            <label>Original Image</label>
+            <label for="image">Choose Image</label>
 
-            <input type="file" accept="image/*">
-
-        </div>
-
-        <div class="form-group">
-
-            <label>Watermarked Image</label>
-
-            <input type="file" accept="image/*">
+            <input
+                id="image"
+                type="file"
+                accept="image/*"
+                required
+            >
 
         </div>
+
+        <p id="uploadMessage"></p>
 
         <div class="form-actions">
 
@@ -179,10 +164,17 @@
     </p>
 
 </footer>
+
 <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="https://unpkg.com/@supabase/supabase-js"></script>
 
 <script src="js/supabase.js"></script>
+
+<script src="js/auth.js"></script>
+
+<script src="js/upload.js"></script>
+
 </body>
 
 </html>
