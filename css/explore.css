@@ -3,28 +3,127 @@
    EXPLORE PAGE
 ========================================================== */
 
-/* Header */
+/* ===========================
+   HERO
+=========================== */
 
-.page-header{
-    padding:80px 5% 40px;
-}
-
-.page-header h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-.page-header p{
-    color:var(--muted);
-}
-
-/* Filters */
-
-.gallery-filters{
+.explore-hero{
 
     width:min(92%,1200px);
 
-    margin:20px auto 40px;
+    margin:70px auto 50px;
+
+    text-align:center;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:rgba(245,158,11,.15);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.explore-hero h1{
+
+    font-size:3.2rem;
+
+    margin-bottom:20px;
+
+}
+
+.explore-hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    padding:18px 20px;
+
+    outline:none;
+
+    font-size:1rem;
+
+}
+
+.search-box button{
+
+    border:none;
+
+    padding:0 30px;
+
+    background:var(--primary);
+
+    color:#111;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   FILTERS
+=========================== */
+
+.filter-section{
+
+    width:min(92%,1200px);
+
+    margin:40px auto;
 
     display:flex;
 
@@ -36,27 +135,27 @@
 
 }
 
-.filter{
+.filter-section button{
 
     background:var(--surface);
 
-    color:var(--muted);
+    color:white;
 
     border:1px solid var(--border);
 
     padding:12px 22px;
 
-    border-radius:50px;
+    border-radius:30px;
 
     cursor:pointer;
 
     transition:.3s;
 
-    font-weight:500;
-
 }
 
-.filter:hover{
+.filter-section button:hover,
+
+.filter-section .active{
 
     background:var(--primary);
 
@@ -64,130 +163,23 @@
 
 }
 
-.filter.active{
-
-    background:var(--primary);
-
-    color:#111;
-
-}
-
-/* Gallery */
-
-.gallery{
-
-    width:min(92%,1200px);
-
-    margin:auto;
-
-    padding-bottom:80px;
-
-}
-
-.gallery-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:28px;
-
-}
-
-/* Card */
-
-.gallery-card{
-
-    display:block;
-
-    overflow:hidden;
-
-    background:var(--surface);
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    transition:.35s;
-
-    box-shadow:var(--shadow);
-
-}
-
-.gallery-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:var(--primary);
-
-}
-
-/* Image */
-
-.gallery-image{
-
-    height:250px;
-
-    background:linear-gradient(
-        135deg,
-        #243b55,
-        #141e30
-    );
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-.gallery-image::before{
-
-    content:"📷";
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:70px;
-
-    opacity:.35;
-
-}
-
-.gallery-image::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-        rgba(0,0,0,0),
-        rgba(0,0,0,.5)
-    );
-
-}
-
-/* Info */
+/* ===========================
+   INFO
+=========================== */
 
 .gallery-info{
 
-    padding:20px;
+    width:min(92%,1200px);
+
+    margin:20px auto 35px;
 
 }
 
-.gallery-info h3{
+.gallery-info h2{
 
-    font-size:1.2rem;
+    font-size:2rem;
 
-    margin-bottom:6px;
+    margin-bottom:8px;
 
 }
 
@@ -195,106 +187,133 @@
 
     color:var(--muted);
 
-    margin-bottom:18px;
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery-grid{
+
+    width:min(92%,1200px);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+
+    gap:25px;
+
+    padding-bottom:90px;
 
 }
 
-/* Actions */
+.photo-card{
 
-.gallery-actions{
+    position:relative;
 
-    display:flex;
+    height:300px;
 
-    justify-content:space-between;
+    border-radius:22px;
 
-    align-items:center;
+    overflow:hidden;
 
-    padding-top:15px;
+    text-decoration:none;
 
-    border-top:1px solid var(--border);
-
-    color:var(--muted);
-
-    font-size:.9rem;
+    box-shadow:var(--shadow);
 
 }
 
-.gallery-actions span{
+.photo-card.tall{
 
-    transition:.3s;
-
-}
-
-.gallery-actions span:hover{
-
-    color:var(--primary);
+    height:420px;
 
 }
 
-/* Hover */
+.photo-card.wide{
 
-.gallery-card:hover .gallery-image{
+    height:360px;
 
-    transform:scale(1.05);
+}
+
+.photo{
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(135deg,#1f2937,#374151,#4b5563);
 
     transition:.4s;
 
 }
 
-/* Empty State */
+.photo-card:hover .photo{
 
-.empty-gallery{
-
-    text-align:center;
-
-    color:var(--muted);
-
-    padding:80px 20px;
+    transform:scale(1.08);
 
 }
 
-.album-meta{
+.overlay{
 
-    display:flex;
+    position:absolute;
 
-    justify-content:space-between;
+    left:0;
 
-    align-items:center;
+    right:0;
 
-    padding-top:18px;
+    bottom:0;
 
-    border-top:1px solid var(--border);
+    padding:20px;
 
-    color:var(--muted);
+    background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
+
+}
+
+.overlay h3{
+
+    color:white;
+
+    margin-bottom:8px;
+
+}
+
+.overlay span{
+
+    color:#ddd;
 
     font-size:.9rem;
 
 }
 
-.album-meta span{
+/* ===========================
+   RESPONSIVE
+=========================== */
 
-    transition:.3s;
+@media(max-width:768px){
 
-}
+    .explore-hero h1{
 
-.album-meta span:hover{
+        font-size:2.3rem;
 
-    color:var(--primary);
+    }
 
-}
-/* Responsive */
+    .search-box{
 
-@media(max-width:900px){
+        flex-direction:column;
 
-    .gallery-grid{
+    }
 
-        grid-template-columns:repeat(2,1fr);
+    .search-box button{
+
+        padding:16px;
 
     }
 
 }
 
-@media(max-width:700px){
+@media(max-width:500px){
 
     .gallery-grid{
 
@@ -302,31 +321,13 @@
 
     }
 
-    .page-header h1{
+    .photo-card,
 
-        font-size:2.4rem;
+    .photo-card.tall,
 
-    }
+    .photo-card.wide{
 
-    .gallery-filters{
-
-        justify-content:flex-start;
-
-        overflow:auto;
-
-        flex-wrap:nowrap;
-
-        padding-bottom:10px;
-
-    }
-
-}
-
-@media(max-width:480px){
-
-    .gallery-image{
-
-        height:220px;
+        height:280px;
 
     }
 
