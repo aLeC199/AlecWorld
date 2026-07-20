@@ -125,6 +125,17 @@ ul{
     z-index:1000;
 
 }
+/* Hide the toggle button by default on desktop view */
+#menuToggle {
+    display: none;
+}
+
+/* Show the toggle button only on mobile screens */
+@media (max-width: 864px) {
+    #menuToggle {
+        display: block; /* or inline-block / flex depending on your button style */
+    }
+}
 
 .logo{
 
