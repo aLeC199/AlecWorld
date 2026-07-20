@@ -129,7 +129,7 @@
    RESPONSIVE - ALECWORLD IMAGE PAGE
 ========================================================== */
 
-@media (max-width: 992px) {
+@media (max-width: 860px) {
     .photo-page {
         grid-template-columns: 1fr; /* stack to 1 column */
         gap: 30px;
