@@ -1,58 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Upload | AlecWorld</title>
+    <title>Upload Photo | AlecWorld</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/upload.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<section class="upload-page">
+<header class="navbar">
 
-<h1>Upload Photo</h1>
+    <a href="dashboard.html" class="logo">
 
-<form>
+        Alec<span>World</span>
 
-<input type="text" placeholder="Photo Title">
+    </a>
 
-<textarea placeholder="Description"></textarea>
+    <nav>
 
-<select>
+        <a href="dashboard.html">Dashboard</a>
 
-<option>Select Album</option>
+        <a href="upload.html" class="active">Upload</a>
 
-</select>
+        <a href="index.html">Website</a>
 
-<select>
+    </nav>
 
-<option>Select Category</option>
+</header>
 
-</select>
+<main class="upload-page">
 
-<label>Original Image</label>
+    <div class="page-header">
 
-<input type="file">
+        <div>
 
-<label>Watermarked Image</label>
+            <h1>Upload Photo</h1>
 
-<input type="file">
+            <p>Add a new photo to your gallery.</p>
 
-<button>
+        </div>
 
-Publish
+    </div>
 
-</button>
+    <form class="upload-form">
 
-</form>
+        <div class="form-group">
 
-</section>
+            <label>Photo Title</label>
+
+            <input
+                type="text"
+                placeholder="Example: Beautiful Sunset"
+                required
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Description</label>
+
+            <textarea
+                rows="5"
+                placeholder="Write something about this photo..."
+            ></textarea>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Album</label>
+
+                <select>
+
+                    <option>Nature</option>
+
+                    <option>Travel</option>
+
+                    <option>Portrait</option>
+
+                    <option>Street</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Category</label>
+
+                <select>
+
+                    <option>Landscape</option>
+
+                    <option>Wildlife</option>
+
+                    <option>Architecture</option>
+
+                    <option>People</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Original Image</label>
+
+            <input type="file" accept="image/*">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Watermarked Image</label>
+
+            <input type="file" accept="image/*">
+
+        </div>
+
+        <div class="form-actions">
+
+            <button class="btn" type="submit">
+
+                Publish Photo
+
+            </button>
+
+        </div>
+
+    </form>
+
+</main>
+
+<footer>
+
+    <div class="footer-logo">
+
+        Alec<span>World</span>
+
+    </div>
+
+    <p>
+
+        AlecWorld Admin Dashboard
+
+    </p>
+
+</footer>
 
 </body>
+
 </html>
