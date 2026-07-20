@@ -49,11 +49,12 @@
 
         <a href="favourites.html">Favourites</a>
 
-        <a href="login.html">Login</a>
+        <a href="login.html" class="active">Login</a>
 
     </nav>
 
 </header>
+
 <section class="login-section">
 
     <div class="login-card">
@@ -66,41 +67,63 @@
 
         <h1>
 
-            Admin Login
+            Welcome Back
 
         </h1>
 
         <p>
 
-            Sign in to manage your photos, albums and categories.
+            Sign in to access your AlecWorld dashboard.
 
         </p>
 
-        <form>
+        <form id="loginForm">
 
             <div class="input-group">
 
-                <label>Email</label>
+                <label for="email">
+
+                    Email
+
+                </label>
 
                 <input
+
+                    id="email"
+
                     type="email"
+
                     placeholder="Enter your email"
+
                     required
+
                 >
 
             </div>
 
             <div class="input-group">
 
-                <label>Password</label>
+                <label for="password">
+
+                    Password
+
+                </label>
 
                 <input
+
+                    id="password"
+
                     type="password"
+
                     placeholder="Enter your password"
+
                     required
+
                 >
 
             </div>
+
+            <p id="message"></p>
 
             <button type="submit" class="btn">
 
@@ -145,10 +168,15 @@
     </p>
 
 </footer>
+
 <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="js/supabase.js"></script>
+
+<script src="js/login.js"></script>
+
 </body>
 
-</html></html>
+</html>
