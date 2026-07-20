@@ -124,6 +124,59 @@
 .secondary {
     background: #1f2937;
 }
+/* ==========================================================
+   ALECWORLD - GALLERY GRID
+========================================================== */
+
+.gallery-grid {
+    width: min(92%, 1200px);
+    margin: 40px auto;
+    display: grid;
+    /* Automatically fits as many cards as possible, min 280px wide */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* ===========================
+   PHOTO CARD
+=========================== */
+
+.photo-card {
+    background: var(--surface, #1f2937);
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+    border-radius: 16px;
+    height: 350px; /* Default card height */
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle hover interaction for desktop */
+@media (hover: hover) {
+    .photo-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE - MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        width: min(94%, 1200px);
+        margin: 20px auto;
+        /* Drops down to 1 full-width column on small screens */
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .photo-card {
+        border-radius: 12px;
+        height: 280px; /* Slightly shorter card height for mobile */
+    }
+}
 
 /* ==========================================================
    RESPONSIVE - ALECWORLD IMAGE PAGE
