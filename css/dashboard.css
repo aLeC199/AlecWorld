@@ -1,0 +1,407 @@
+/* ==========================================================
+   ALECWORLD DASHBOARD
+========================================================== */
+
+.dashboard{
+
+    width:min(92%,1300px);
+
+    margin:60px auto 100px;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-bottom:45px;
+
+}
+
+.dashboard-header h1{
+
+    font-size:2.8rem;
+
+    margin-bottom:10px;
+
+}
+
+.dashboard-header p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+    gap:25px;
+
+    margin-bottom:45px;
+
+}
+
+.stat-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+}
+
+.stat-card h2{
+
+    font-size:2.3rem;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:var(--muted);
+
+}
+
+/* ===========================
+   QUICK ACTIONS
+=========================== */
+
+.quick-actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:45px;
+
+}
+
+.action-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.action-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+}
+
+.action-card{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.action-card{
+
+    font-size:45px;
+
+}
+
+.action-card h3{
+
+    margin-top:15px;
+
+    font-size:1.2rem;
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.dashboard-content{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.dashboard-tabs{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:25px;
+
+    border-bottom:1px solid var(--border);
+
+    flex-wrap:wrap;
+
+}
+
+.tab{
+
+    border:none;
+
+    background:#111827;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:.95rem;
+
+}
+
+.tab:hover{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+.tab.active{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.dashboard-table{
+
+    overflow-x:auto;
+
+}
+
+table{
+
+    width:100%;
+
+    min-width:850px;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#111827;
+
+    color:white;
+
+    padding:18px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:18px;
+
+    border-top:1px solid var(--border);
+
+    color:var(--muted);
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:hover{
+
+    background:rgba(255,255,255,.03);
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+td button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:9px 15px;
+
+    border-radius:10px;
+
+    margin-right:8px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+td button:first-child{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+td button:last-child{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+td button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .quick-actions{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .dashboard-header .btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .dashboard{
+
+        width:94%;
+
+    }
+
+    .dashboard-header h1{
+
+        font-size:2rem;
+
+    }
+
+    .stat-card{
+
+        padding:22px;
+
+    }
+
+    .action-card{
+
+        padding:25px;
+
+    }
+
+    .dashboard-tabs{
+
+        flex-direction:column;
+
+    }
+
+    .tab{
+
+        width:100%;
+
+    }
+
+}
