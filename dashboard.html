@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Studio | AlecWorld</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | AlecWorld</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -14,41 +25,220 @@
 
 <header class="navbar">
 
-<div class="logo">AlecWorld Studio</div>
+    <a href="index.html" class="logo">
 
-<nav>
+        Alec<span>World</span>
 
-<a href="dashboard.html">Dashboard</a>
+    </a>
 
-<a href="upload.html">Upload</a>
+    <nav>
 
-<a href="manage-images.html">Images</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
 
-<a href="manage-albums.html">Albums</a>
+        <a href="upload.html">Upload</a>
 
-<a href="manage-categories.html">Categories</a>
+        <a href="manage-images.html">Images</a>
 
-</nav>
+        <a href="manage-albums.html">Albums</a>
+
+        <a href="manage-categories.html">Categories</a>
+
+    </nav>
+
+    <div class="nav-right">
+
+        <a href="index.html" class="login-btn">
+
+            View Website
+
+        </a>
+
+    </div>
 
 </header>
 
+
+
 <section class="dashboard">
 
-<h1>Dashboard</h1>
+    <div class="dashboard-header">
 
-<div class="dashboard-grid">
+        <div>
 
-<div class="card">Photos</div>
+            <h1>Dashboard</h1>
 
-<div class="card">Albums</div>
+            <p>
 
-<div class="card">Categories</div>
+                Welcome back. Manage your gallery from here.
 
-<div class="card">Downloads</div>
+            </p>
 
-</div>
+        </div>
+
+        <a href="upload.html" class="btn">
+
+            + Upload Photo
+
+        </a>
+
+    </div>
+
+
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <h2>248</h2>
+
+            <p>Total Photos</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>12</h2>
+
+            <p>Albums</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>8</h2>
+
+            <p>Categories</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>5,482</h2>
+
+            <p>Downloads</p>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="dashboard-table">
+
+        <div class="table-header">
+
+            <h2>Recent Uploads</h2>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+
+                    <th>Album</th>
+
+                    <th>Category</th>
+
+                    <th>Downloads</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Golden Sunset.jpg</td>
+
+                    <td>Nature</td>
+
+                    <td>Landscape</td>
+
+                    <td>231</td>
+
+                    <td>
+
+                        <button>Edit</button>
+
+                        <button>Delete</button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Forest Walk.jpg</td>
+
+                    <td>Nature</td>
+
+                    <td>Forest</td>
+
+                    <td>142</td>
+
+                    <td>
+
+                        <button>Edit</button>
+
+                        <button>Delete</button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Night City.jpg</td>
+
+                    <td>Street</td>
+
+                    <td>Night</td>
+
+                    <td>89</td>
+
+                    <td>
+
+                        <button>Edit</button>
+
+                        <button>Delete</button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
 
 </section>
 
+
+
+<footer>
+
+    <div class="footer-logo">
+
+        Alec<span>World</span>
+
+    </div>
+
+    <p>
+
+        AlecWorld Admin Dashboard
+
+    </p>
+
+</footer>
+
 </body>
+
 </html>
