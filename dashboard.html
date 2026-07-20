@@ -25,7 +25,7 @@
 
 <header class="navbar">
 
-    <a href="index.html" class="logo">
+    <a href="dashboard.html" class="logo">
 
         Alec<span>World</span>
 
@@ -36,12 +36,6 @@
         <a href="dashboard.html" class="active">Dashboard</a>
 
         <a href="upload.html">Upload</a>
-
-        <a href="manage-images.html">Images</a>
-
-        <a href="manage-albums.html">Albums</a>
-
-        <a href="manage-categories.html">Categories</a>
 
     </nav>
 
@@ -65,11 +59,11 @@
 
         <div>
 
-            <h1>Dashboard</h1>
+            <h1>Welcome Back 👋</h1>
 
             <p>
 
-                Welcome back. Manage your gallery from here.
+                Manage your photos, albums and categories from one place.
 
             </p>
 
@@ -113,9 +107,25 @@
 
         <div class="stat-card">
 
-            <h2>5,482</h2>
+            <h2>1,458</h2>
+
+            <p>Favourites</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>18,502</h2>
 
             <p>Downloads</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>45,811</h2>
+
+            <p>Views</p>
 
         </div>
 
@@ -123,99 +133,151 @@
 
 
 
-    <section class="dashboard-table">
+    <section class="quick-actions">
 
-        <div class="table-header">
+        <a href="upload.html" class="action-card">
 
-            <h2>Recent Uploads</h2>
+            📤
+
+            <h3>Upload Photo</h3>
+
+        </a>
+
+        <a href="#" class="action-card">
+
+            📂
+
+            <h3>Create Album</h3>
+
+        </a>
+
+        <a href="#" class="action-card">
+
+            🏷
+
+            <h3>Create Category</h3>
+
+        </a>
+
+    </section>
+
+
+
+    <section class="dashboard-content">
+
+        <div class="dashboard-tabs">
+
+            <button class="tab active">
+
+                📷 Images
+
+            </button>
+
+            <button class="tab">
+
+                📂 Albums
+
+            </button>
+
+            <button class="tab">
+
+                🏷 Categories
+
+            </button>
 
         </div>
 
-        <table>
 
-            <thead>
 
-                <tr>
+        <div class="dashboard-table">
 
-                    <th>Image</th>
+            <table>
 
-                    <th>Album</th>
+                <thead>
 
-                    <th>Category</th>
+                    <tr>
 
-                    <th>Downloads</th>
+                        <th>Name</th>
 
-                    <th>Action</th>
+                        <th>Album</th>
 
-                </tr>
+                        <th>Category</th>
 
-            </thead>
+                        <th>Downloads</th>
 
-            <tbody>
+                        <th>Action</th>
 
-                <tr>
+                    </tr>
 
-                    <td>Golden Sunset.jpg</td>
+                </thead>
 
-                    <td>Nature</td>
+                <tbody>
 
-                    <td>Landscape</td>
+                    <tr>
 
-                    <td>231</td>
+                        <td>Golden Sunset.jpg</td>
 
-                    <td>
+                        <td>Nature</td>
 
-                        <button>Edit</button>
+                        <td>Landscape</td>
 
-                        <button>Delete</button>
+                        <td>231</td>
 
-                    </td>
+                        <td>
 
-                </tr>
+                            <button>Edit</button>
 
-                <tr>
+                            <button>Delete</button>
 
-                    <td>Forest Walk.jpg</td>
+                        </td>
 
-                    <td>Nature</td>
+                    </tr>
 
-                    <td>Forest</td>
+                    <tr>
 
-                    <td>142</td>
+                        <td>Forest Walk.jpg</td>
 
-                    <td>
+                        <td>Nature</td>
 
-                        <button>Edit</button>
+                        <td>Forest</td>
 
-                        <button>Delete</button>
+                        <td>145</td>
 
-                    </td>
+                        <td>
 
-                </tr>
+                            <button>Edit</button>
 
-                <tr>
+                            <button>Delete</button>
 
-                    <td>Night City.jpg</td>
+                        </td>
 
-                    <td>Street</td>
+                    </tr>
 
-                    <td>Night</td>
+                    <tr>
 
-                    <td>89</td>
+                        <td>Night City.jpg</td>
 
-                    <td>
+                        <td>Street</td>
 
-                        <button>Edit</button>
+                        <td>Night</td>
 
-                        <button>Delete</button>
+                        <td>93</td>
 
-                    </td>
+                        <td>
 
-                </tr>
+                            <button>Edit</button>
 
-            </tbody>
+                            <button>Delete</button>
 
-        </table>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
 
     </section>
 
@@ -233,7 +295,7 @@
 
     <p>
 
-        AlecWorld Admin Dashboard
+        AlecWorld Admin Panel
 
     </p>
 
