@@ -986,3 +986,71 @@ footer p{
 }
 
 .login-card button:hover
+
+/* =====================================
+   RESPONSIVE NAVBAR
+===================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-wrap:wrap;
+
+        padding:18px;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    nav{
+
+        display:none;
+
+        width:100%;
+
+        flex-direction:column;
+
+        gap:18px;
+
+        margin-top:20px;
+
+        padding-top:20px;
+
+        border-top:1px solid var(--border);
+
+    }
+
+    nav.show{
+
+        display:flex;
+
+    }
+
+    .nav-right{
+
+        display:none;
+
+    }
+
+}
