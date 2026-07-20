@@ -24,7 +24,6 @@
 </head>
 
 <body>
-
 <header class="navbar">
 
     <a href="index.html" class="logo">
@@ -33,7 +32,13 @@
 
     </a>
 
-    <nav>
+    <button class="menu-toggle" id="menuToggle">
+
+        ☰
+
+    </button>
+
+    <nav id="mobileMenu">
 
         <a href="index.html">Home</a>
 
@@ -43,28 +48,13 @@
 
         <a href="categories.html">Categories</a>
 
-        <a href="favourites.html" class="active">Favourites</a>
+        <a href="favourites.html">Favourites</a>
+
+        <a href="login.html">Login</a>
 
     </nav>
 
-    <div class="nav-right">
-
-        <input
-            type="search"
-            placeholder="Search favourites..."
-            class="search-box"
-        >
-
-        <a href="login.html" class="login-btn">
-
-            Login
-
-        </a>
-
-    </div>
-
 </header>
-
 
 
 <section class="favourites-hero">
@@ -290,6 +280,6 @@
 <p>© 2026 AlecWorld</p>
 
 </footer>
-
+<script src="js/main.js"></script>
 </body>
 </html>
