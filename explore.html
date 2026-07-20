@@ -4,14 +4,17 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Explore | AlecWorld</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/gallery.css">
+
+    <link rel="stylesheet" href="css/explore.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,7 +37,7 @@
 
         <a href="explore.html" class="active">Explore</a>
 
-        <a href="album.html">Albums</a>
+        <a href="albums.html">Albums</a>
 
         <a href="categories.html">Categories</a>
 
@@ -42,383 +45,186 @@
 
     </nav>
 
-    <div class="nav-right">
-
-        <input
-            type="search"
-            placeholder="Search photos..."
-            class="search-box"
-        >
-
-        <a href="login.html" class="login-btn">
-
-            Login
-
-        </a>
-
-    </div>
-
 </header>
 
+<section class="explore-hero">
 
+    <span class="badge">
 
+        Discover
 
+    </span>
 
-<section class="page-header">
+    <h1>
 
-    <h1>Explore Photos</h1>
+        Explore Beautiful Photography
+
+    </h1>
 
     <p>
 
-        Browse every photograph in the AlecWorld collection.
+        Browse stunning photographs across different albums and categories. Download your favourites in original or watermarked quality.
+
+    </p>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            placeholder="Search photos..."
+        >
+
+        <button>
+
+            Search
+
+        </button>
+
+    </div>
+
+</section>
+
+<section class="filter-section">
+
+    <button class="active">All</button>
+
+    <button>Nature</button>
+
+    <button>Travel</button>
+
+    <button>Street</button>
+
+    <button>Portrait</button>
+
+    <button>Architecture</button>
+
+</section>
+
+<section class="gallery-info">
+
+    <h2>
+
+        1,248 Photos Available
+
+    </h2>
+
+    <p>
+
+        Updated regularly with new high-quality images.
 
     </p>
 
 </section>
 
+<section class="gallery-grid">
 
+    <a href="image.html" class="photo-card">
 
+        <div class="photo"></div>
 
+        <div class="overlay">
 
-<section class="gallery-filters">
+            <h3>Golden Sunset</h3>
 
-    <button class="filter active">
+            <span>Nature</span>
 
-        All
+        </div>
 
-    </button>
+    </a>
 
-    <button class="filter">
+    <a href="image.html" class="photo-card tall">
 
-        Nature
+        <div class="photo"></div>
 
-    </button>
+        <div class="overlay">
 
-    <button class="filter">
+            <h3>Forest Walk</h3>
 
-        Portrait
+            <span>Travel</span>
 
-    </button>
+        </div>
 
-    <button class="filter">
+    </a>
 
-        Street
+    <a href="image.html" class="photo-card">
 
-    </button>
+        <div class="photo"></div>
 
-    <button class="filter">
+        <div class="overlay">
 
-        Travel
+            <h3>City Lights</h3>
 
-    </button>
+            <span>Street</span>
 
-    <button class="filter">
+        </div>
 
-        Events
+    </a>
 
-    </button>
+    <a href="image.html" class="photo-card wide">
 
-</section>
+        <div class="photo"></div>
 
+        <div class="overlay">
 
+            <h3>Blue Ocean</h3>
 
+            <span>Nature</span>
 
+        </div>
 
-<section class="gallery">
+    </a>
 
-<div class="gallery-grid">
+    <a href="image.html" class="photo-card">
 
-<a href="image.html" class="gallery-card">
+        <div class="photo"></div>
 
-<div class="gallery-image"></div>
+        <div class="overlay">
 
-<div class="gallery-info">
+            <h3>Mountain Peak</h3>
 
-<h3>Golden Sunset</h3>
+            <span>Travel</span>
 
-<p>Nature</p>
+        </div>
 
-<div class="gallery-actions">
+    </a>
 
-<span>❤ Favourite</span>
+    <a href="image.html" class="photo-card tall">
 
-<span>⬇ Download</span>
+        <div class="photo"></div>
 
-</div>
+        <div class="overlay">
 
-</div>
+            <h3>Night View</h3>
 
-</a>
+            <span>City</span>
 
-<a href="image.html" class="gallery-card">
+        </div>
 
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Mountain View</h3>
-
-<p>Travel</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Night Lights</h3>
-
-<p>Street</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Forest Path</h3>
-
-<p>Nature</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Ocean Breeze</h3>
-
-<p>Travel</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>City Rush</h3>
-
-<p>Street</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Wedding Smile</h3>
-
-<p>Events</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Quiet Lake</h3>
-
-<p>Nature</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Morning Coffee</h3>
-
-<p>Lifestyle</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Rainy Road</h3>
-
-<p>Street</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Wild Adventure</h3>
-
-<p>Travel</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-<a href="image.html" class="gallery-card">
-
-<div class="gallery-image"></div>
-
-<div class="gallery-info">
-
-<h3>Happy Moments</h3>
-
-<p>Portrait</p>
-
-<div class="gallery-actions">
-
-<span>❤ Favourite</span>
-
-<span>⬇ Download</span>
-
-</div>
-
-</div>
-
-</a>
-
-</div>
+    </a>
 
 </section>
 
 <footer>
 
-<div class="footer-logo">
+    <div class="footer-logo">
 
-Alec<span>World</span>
+        Alec<span>World</span>
 
-</div>
+    </div>
 
-<p>
+    <p>
 
-Capture moments. Share memories.
+        Capture Moments. Share Memories.
 
-</p>
+    </p>
 
-<p>
+    <p>
 
-© 2026 AlecWorld. All Rights Reserved.
+        © 2026 AlecWorld
 
-</p>
+    </p>
 
 </footer>
-
-<script src="js/gallery.js"></script>
 
 </body>
 
