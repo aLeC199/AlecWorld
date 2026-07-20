@@ -116,7 +116,7 @@ ul{
 
     align-items:center;
 
-    background:rgba(11,17,32,.75);
+    background:#03060a;
 
     backdrop-filter:blur(18px);
 
@@ -438,7 +438,7 @@ footer{
 
     border-top:1px solid var(--border);
 
-    background:#09101d;
+    background:#03060a;
 
 }
 
