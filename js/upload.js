@@ -1,77 +1,111 @@
+// ======================================
+// ALECWORLD UPLOAD
+// ======================================
+
 const form = document.getElementById("uploadForm");
+
+const imageInput = document.getElementById("image");
+
+const preview = document.getElementById("preview");
 
 const title = document.getElementById("title");
 
 const description = document.getElementById("description");
 
-const image = document.getElementById("image");
+const album = document.getElementById("album");
 
-const message = document.getElementById("uploadMessage");
+const category = document.getElementById("category");
 
-form.addEventListener("submit", async (e) => {
+const featured = document.getElementById("featured");
 
-    e.preventDefault();
+const progressBar = document.getElementById("progressBar");
 
-    message.style.color = "white";
-    message.textContent = "Uploading photo...";
+const uploadMessage = document.getElementById("uploadMessage");
 
-    const file = image.files[0];
+// ======================================
+// LOAD ALBUMS
+// ======================================
 
-    if (!file) {
+async function loadAlbums(){
 
-        message.style.color = "red";
-        message.textContent = "Please select an image.";
+    const { data, error } = await window.supabaseClient
+        .from("albums")
+        .select("*")
+        .order("name");
 
-        return;
+    album.innerHTML =
+        '<option value="">Select Album</option>';
 
-    }
+    if(error){
 
-    const fileName = Date.now() + "-" + file.name;
-
-    const filePath = "photos/" + fileName;
-
-    const { error: uploadError } = await window.supabaseClient.storage
-        .from("images")
-        .upload(filePath, file);
-
-    if (uploadError) {
-
-        message.style.color = "red";
-        message.textContent = uploadError.message;
+        console.error(error);
 
         return;
 
     }
 
-    const { data } = window.supabaseClient.storage
-        .from("images")
-        .getPublicUrl(filePath);
+    data.forEach(item=>{
 
-    const imageUrl = data.publicUrl;
+        album.innerHTML += `
+            <option value="${item.id}">
+                ${item.name}
+            </option>
+        `;
 
-    const { error: dbError } = await window.supabaseClient
-        .from("images")
-        .insert([
-            {
-                title: title.value,
-                description: description.value,
-                original_url: imageUrl,
-                image_path: filePath
-            }
-        ]);
+    });
 
-    if (dbError) {
+}
 
-        message.style.color = "red";
-        message.textContent = dbError.message;
+// ======================================
+// LOAD CATEGORIES
+// ======================================
+
+async function loadCategories(){
+
+    const { data, error } = await window.supabaseClient
+        .from("categories")
+        .select("*")
+        .order("name");
+
+    category.innerHTML =
+        '<option value="">Select Category</option>';
+
+    if(error){
+
+        console.error(error);
 
         return;
 
     }
 
-    message.style.color = "#22c55e";
-    message.textContent = "Photo uploaded successfully!";
+    data.forEach(item=>{
 
-    form.reset();
+        category.innerHTML += `
+            <option value="${item.id}">
+                ${item.name}
+            </option>
+        `;
+
+    });
+
+}
+
+loadAlbums();
+
+loadCategories();
+
+// ======================================
+// IMAGE PREVIEW
+// ======================================
+
+imageInput.addEventListener("change",()=>{
+
+    const file = imageInput.files[0];
+
+    if(!file) return;
+
+    preview.src = URL.createObjectURL(file);
+
+    preview.style.display="block";
 
 });
