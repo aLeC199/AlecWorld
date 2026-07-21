@@ -10,7 +10,6 @@
     <title>Upload Photo | AlecWorld</title>
 
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="stylesheet" href="css/upload.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +24,7 @@
 
 <header class="navbar">
 
-    <a href="index.html" class="logo">
+    <a href="dashboard.html" class="logo">
 
         Alec<span>World</span>
 
@@ -39,17 +38,11 @@
 
     <nav id="mobileMenu">
 
-        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
 
-        <a href="explore.html">Explore</a>
+        <a href="upload.html" class="active">Upload</a>
 
-        <a href="albums.html">Albums</a>
-
-        <a href="categories.html">Categories</a>
-
-        <a href="favourites.html">Favourites</a>
-
-        <a href="login.html">Login</a>
+        <a href="index.html">Website</a>
 
     </nav>
 
@@ -59,9 +52,9 @@
 
     <div class="page-header">
 
-        <h1>Upload Photo</h1>
+        <h1>Upload New Photo</h1>
 
-        <p>Add a new photo to your AlecWorld gallery.</p>
+        <p>Upload an image to your AlecWorld gallery.</p>
 
     </div>
 
@@ -69,7 +62,11 @@
 
         <div class="form-group">
 
-            <label for="title">Photo Title</label>
+            <label for="title">
+
+                Photo Title
+
+            </label>
 
             <input
                 id="title"
@@ -82,7 +79,11 @@
 
         <div class="form-group">
 
-            <label for="description">Description</label>
+            <label for="description">
+
+                Description
+
+            </label>
 
             <textarea
                 id="description"
@@ -96,11 +97,19 @@
 
             <div class="form-group">
 
-                <label for="album">Album</label>
+                <label for="album">
+
+                    Album
+
+                </label>
 
                 <select id="album">
 
-                    <option value="">Select Album</option>
+                    <option value="">
+
+                        Loading albums...
+
+                    </option>
 
                 </select>
 
@@ -108,11 +117,19 @@
 
             <div class="form-group">
 
-                <label for="category">Category</label>
+                <label for="category">
+
+                    Category
+
+                </label>
 
                 <select id="category">
 
-                    <option value="">Select Category</option>
+                    <option value="">
+
+                        Loading categories...
+
+                    </option>
 
                 </select>
 
@@ -120,9 +137,28 @@
 
         </div>
 
+        <div class="form-group checkbox-group">
+
+            <label>
+
+                <input
+                    id="featured"
+                    type="checkbox"
+                >
+
+                Featured Photo
+
+            </label>
+
+        </div>
+
         <div class="form-group">
 
-            <label for="image">Choose Image</label>
+            <label for="image">
+
+                Choose Image
+
+            </label>
 
             <input
                 id="image"
@@ -133,11 +169,34 @@
 
         </div>
 
-        <p id="uploadMessage"></p>
+        <div class="image-preview">
+
+            <img
+                id="preview"
+                src=""
+                alt="Preview"
+                style="display:none;"
+            >
+
+        </div>
+
+        <div class="progress">
+
+            <div
+                id="progressBar"
+                class="progress-bar"
+            ></div>
+
+        </div>
+
+        <p id="uploadMessage" class="upload-message"></p>
 
         <div class="form-actions">
 
-            <button class="btn" type="submit">
+            <button
+                type="submit"
+                class="btn"
+            >
 
                 Publish Photo
 
@@ -167,7 +226,7 @@
 
 <script src="js/main.js"></script>
 
-<script src="https://unpkg.com/@supabase/supabase-js"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
 <script src="js/supabase.js"></script>
 
