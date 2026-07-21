@@ -3,48 +3,37 @@
 // ======================================
 
 const form = document.getElementById("uploadForm");
-
 const imageInput = document.getElementById("image");
-
 const preview = document.getElementById("preview");
-
 const title = document.getElementById("title");
-
 const description = document.getElementById("description");
-
 const album = document.getElementById("album");
-
 const category = document.getElementById("category");
-
 const featured = document.getElementById("featured");
-
 const progressBar = document.getElementById("progressBar");
-
 const uploadMessage = document.getElementById("uploadMessage");
 
 // ======================================
 // LOAD ALBUMS
 // ======================================
 
-async function loadAlbums(){
+async function loadAlbums() {
 
     const { data, error } = await window.supabaseClient
         .from("albums")
         .select("*")
         .order("name");
 
-    album.innerHTML =
-        '<option value="">Select Album</option>';
+    album.innerHTML = '<option value="">Select Album</option>';
 
-    if(error){
+    if (error) {
 
-        console.error(error);
-
+        uploadMessage.textContent = error.message;
         return;
 
     }
 
-    data.forEach(item=>{
+    data.forEach(item => {
 
         album.innerHTML += `
             <option value="${item.id}">
@@ -60,25 +49,23 @@ async function loadAlbums(){
 // LOAD CATEGORIES
 // ======================================
 
-async function loadCategories(){
+async function loadCategories() {
 
     const { data, error } = await window.supabaseClient
         .from("categories")
         .select("*")
         .order("name");
 
-    category.innerHTML =
-        '<option value="">Select Category</option>';
+    category.innerHTML = '<option value="">Select Category</option>';
 
-    if(error){
+    if (error) {
 
-        console.error(error);
-
+        uploadMessage.textContent = error.message;
         return;
 
     }
 
-    data.forEach(item=>{
+    data.forEach(item => {
 
         category.innerHTML += `
             <option value="${item.id}">
@@ -91,27 +78,25 @@ async function loadCategories(){
 }
 
 loadAlbums();
-
 loadCategories();
 
 // ======================================
 // IMAGE PREVIEW
 // ======================================
 
-imageInput.addEventListener("change",()=>{
+imageInput.addEventListener("change", () => {
 
     const file = imageInput.files[0];
 
-    if(!file) return;
+    if (!file) return;
 
     preview.src = URL.createObjectURL(file);
-
-    preview.style.display="block";
+    preview.style.display = "block";
 
 });
 
 // ======================================
-// PUBLISH PHOTO
+// UPLOAD
 // ======================================
 
 form.addEventListener("submit", async (e) => {
@@ -121,103 +106,46 @@ form.addEventListener("submit", async (e) => {
     uploadMessage.style.color = "white";
     uploadMessage.textContent = "Uploading...";
 
-    progressBar.style.width = "10%";
+    progressBar.style.width = "20%";
 
     const file = imageInput.files[0];
 
     if (!file) {
 
         uploadMessage.style.color = "red";
-        uploadMessage.textContent = "Please select an image.";
+        uploadMessage.textContent = "Select an image.";
 
         return;
 
     }
 
-    const fileName = `${Date.now()}-${file.name}`;
+    const fileName = Date.now() + "-" + file.name;
 
-    // Upload Original
-    const { error: originalError } = await window.supabaseClient
+    // Upload image
+
+    const { error: uploadError } = await window.supabaseClient
         .storage
         .from("images")
         .upload(`originals/${fileName}`, file);
 
-    if (originalError) {
+    if (uploadError) {
 
         uploadMessage.style.color = "red";
-        uploadMessage.textContent = originalError.message;
+        uploadMessage.textContent = uploadError.message;
 
         return;
 
     }
 
-    progressBar.style.width = "40%";
+    progressBar.style.width = "70%";
 
-    // Create Watermarked Version
-    const img = new Image();
-
-    img.src = URL.createObjectURL(file);
-
-    await new Promise(resolve => img.onload = resolve);
-
-    const canvas = document.createElement("canvas");
-
-    canvas.width = img.width;
-
-    canvas.height = img.height;
-
-    const ctx = canvas.getContext("2d");
-
-    ctx.drawImage(img, 0, 0);
-
-    ctx.font = `${Math.max(30, img.width / 35)}px Poppins`;
-
-    ctx.fillStyle = "rgba(255,255,255,0.35)";
-
-    ctx.textAlign = "right";
-
-    ctx.fillText(
-        "AlecWorld",
-        img.width - 40,
-        img.height - 40
-    );
-
-    const watermarkedBlob = await new Promise(resolve =>
-        canvas.toBlob(resolve, "image/jpeg", 0.95)
-    );
-
-    progressBar.style.width = "60%";
-
-    const { error: watermarkError } = await window.supabaseClient
-        .storage
-        .from("images")
-        .upload(
-            `watermarks/${fileName}`,
-            watermarkedBlob
-        );
-
-    if (watermarkError) {
-
-        uploadMessage.style.color = "red";
-        uploadMessage.textContent = watermarkError.message;
-
-        return;
-
-    }
-
-    progressBar.style.width = "80%";
-
-    const originalURL = window.supabaseClient
+    const imageUrl = window.supabaseClient
         .storage
         .from("images")
         .getPublicUrl(`originals/${fileName}`)
         .data.publicUrl;
 
-    const watermarkURL = window.supabaseClient
-        .storage
-        .from("images")
-        .getPublicUrl(`watermarks/${fileName}`)
-        .data.publicUrl;
+    // Save to database
 
     const { error: dbError } = await window.supabaseClient
         .from("photos")
@@ -227,9 +155,9 @@ form.addEventListener("submit", async (e) => {
 
             description: description.value,
 
-            original_url: originalURL,
+            original_url: imageUrl,
 
-            watermark_url: watermarkURL,
+            watermark_url: imageUrl,
 
             album_id: album.value || null,
 
@@ -251,12 +179,12 @@ form.addEventListener("submit", async (e) => {
     progressBar.style.width = "100%";
 
     uploadMessage.style.color = "#22c55e";
-    uploadMessage.textContent = "Upload completed successfully!";
+    uploadMessage.textContent = "Photo uploaded successfully.";
 
     setTimeout(() => {
 
         window.location.href = "dashboard.html";
 
-    }, 1200);
+    }, 1000);
 
 });
