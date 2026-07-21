@@ -10,166 +10,424 @@
 <title>Dashboard | AlecWorld</title>
 
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="stylesheet" href="css/dashboard.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<header class="navbar">
+<div class="dashboard-layout">
+
+<!-- Sidebar -->
+
+<aside class="sidebar" id="sidebar">
+
+<div class="sidebar-top">
 
 <a href="dashboard.html" class="logo">
+
 Alec<span>World</span>
+
 </a>
 
-<nav>
+<button id="closeSidebar" class="icon-btn">
 
-<a href="dashboard.html" class="active">Dashboard</a>
-
-<a href="upload.html">Upload</a>
-
-<a href="index.html">Website</a>
-<button id="logoutBtn" class="btn">
-
-    Logout
+<i data-lucide="x"></i>
 
 </button>
-</nav>
+
+</div>
+
+<ul class="sidebar-menu">
+
+<li>
+
+<a href="dashboard.html" class="active">
+
+<i data-lucide="layout-dashboard"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#images">
+
+<i data-lucide="image"></i>
+
+<span>Images</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#albums">
+
+<i data-lucide="folder"></i>
+
+<span>Albums</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#categories">
+
+<i data-lucide="tags"></i>
+
+<span>Categories</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="upload.html">
+
+<i data-lucide="upload"></i>
+
+<span>Upload</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="index.html">
+
+<i data-lucide="globe"></i>
+
+<span>View Website</span>
+
+</a>
+
+</li>
+
+</ul>
+
+<div class="sidebar-bottom">
+
+<button id="logoutBtn" class="logout-btn">
+
+<i data-lucide="log-out"></i>
+
+<span>Logout</span>
+
+</button>
+
+</div>
+
+</aside>
+
+<!-- Main -->
+
+<div class="main-content">
+
+<header class="topbar">
+
+<div class="topbar-left">
+
+<button id="menuBtn" class="icon-btn">
+
+<i data-lucide="menu"></i>
+
+</button>
+
+<h2>
+
+Dashboard
+
+</h2>
+
+</div>
+
+<div class="topbar-right">
+
+<div class="search-wrapper">
+
+<i data-lucide="search"></i>
+
+<input
+
+type="text"
+
+id="searchInput"
+
+placeholder="Search..."
+
+>
+
+</div>
+
+<button id="themeToggle" class="icon-btn">
+
+<i data-lucide="moon"></i>
+
+</button>
+
+</div>
 
 </header>
 
-<main class="dashboard">
+<main class="dashboard-page">
 
-<div class="dashboard-header">
+<section class="welcome-card">
 
 <div>
 
-<h1>Welcome Back 👋</h1>
+<p class="dashboard-label">
 
-<p>Manage your photos, albums and categories.</p>
+ADMIN PANEL
+
+</p>
+
+<h1>
+
+Welcome Back 👋
+
+</h1>
+
+<p>
+
+Manage your photography collection from one beautiful dashboard.
+
+</p>
 
 </div>
 
 <a href="upload.html" class="btn">
 
-+ Upload Photo
+<i data-lucide="upload"></i>
+
+<span>Upload Photo</span>
 
 </a>
 
+</section>
+
+<section class="stats-grid">
+
+<div class="dashboard-card">
+
+<div class="card-icon">
+
+<i data-lucide="image"></i>
+
 </div>
 
-<div class="stats-grid">
+<div>
 
-<div class="stat-card">
+<h2 id="photoCount">
 
-<h2>248</h2>
+0
+
+</h2>
 
 <p>Total Photos</p>
 
 </div>
 
-<div class="stat-card">
+</div>
 
-<h2>12</h2>
+<div class="dashboard-card">
+
+<div class="card-icon">
+
+<i data-lucide="folder"></i>
+
+</div>
+
+<div>
+
+<h2 id="albumCount">
+
+0
+
+</h2>
 
 <p>Albums</p>
 
 </div>
 
-<div class="stat-card">
+</div>
 
-<h2>8</h2>
+<div class="dashboard-card">
+
+<div class="card-icon">
+
+<i data-lucide="tags"></i>
+
+</div>
+
+<div>
+
+<h2 id="categoryCount">
+
+0
+
+</h2>
 
 <p>Categories</p>
 
 </div>
 
-<div class="stat-card">
+</div>
 
-<h2>1,458</h2>
+<div class="dashboard-card">
 
-<p>Favourites</p>
+<div class="card-icon">
+
+<i data-lucide="download"></i>
 
 </div>
 
-<div class="stat-card">
+<div>
 
-<h2>18,502</h2>
+<h2 id="downloadCount">
+
+0
+
+</h2>
 
 <p>Downloads</p>
 
 </div>
 
-<div class="stat-card">
+</div>
 
-<h2>45,811</h2>
+</section>
 
-<p>Views</p>
+<!-- Quick Actions -->
+
+<section class="quick-actions">
+
+<div class="section-header">
+
+<h2>Quick Actions</h2>
+
+<a href="upload.html">View All</a>
 
 </div>
 
-</div>
-
-<div class="quick-actions">
+<div class="action-grid">
 
 <a href="upload.html" class="action-card">
 
-📤
+<div class="action-icon">
+
+<i data-lucide="upload"></i>
+
+</div>
 
 <h3>Upload Photo</h3>
 
+<p>Add a new image to your gallery.</p>
+
 </a>
 
-<a href="#" class="action-card">
+<button class="action-card" id="createAlbum">
 
-📂
+<div class="action-icon">
+
+<i data-lucide="folder-plus"></i>
+
+</div>
 
 <h3>Create Album</h3>
 
-</a>
+<p>Organize your images.</p>
 
-<a href="#" class="action-card">
+</button>
 
-🏷
+<button class="action-card" id="createCategory">
+
+<div class="action-icon">
+
+<i data-lucide="folder-tree"></i>
+
+</div>
 
 <h3>Create Category</h3>
 
+<p>Keep your photos organized.</p>
+
+</button>
+
+<a href="index.html" class="action-card">
+
+<div class="action-icon">
+
+<i data-lucide="globe"></i>
+
+</div>
+
+<h3>Visit Website</h3>
+
+<p>Open AlecWorld homepage.</p>
+
 </a>
 
 </div>
 
-<div class="dashboard-content">
+</section>
 
-<div class="dashboard-tabs">
+<!-- Content -->
 
-<button class="tab active">
+<section class="content-card">
 
-📷 Images
+<div class="content-header">
+
+<h2>Gallery Manager</h2>
+
+<div class="table-tabs">
+
+<button class="tab-btn active" data-tab="images">
+
+<i data-lucide="image"></i>
+
+<span>Images</span>
 
 </button>
 
-<button class="tab">
+<button class="tab-btn" data-tab="albums">
 
-📂 Albums
+<i data-lucide="folder"></i>
+
+<span>Albums</span>
 
 </button>
 
-<button class="tab">
+<button class="tab-btn" data-tab="categories">
 
-🏷 Categories
+<i data-lucide="tags"></i>
+
+<span>Categories</span>
 
 </button>
 
 </div>
 
-<div class="dashboard-table">
+</div>
+
+<!-- Images -->
+
+<div class="tab-content active" id="images">
+
+<div class="table-container">
 
 <table>
 
@@ -177,7 +435,9 @@ Alec<span>World</span>
 
 <tr>
 
-<th>Image</th>
+<th>Preview</th>
+
+<th>Title</th>
 
 <th>Album</th>
 
@@ -191,63 +451,13 @@ Alec<span>World</span>
 
 </thead>
 
-<tbody>
+<tbody id="imagesTable">
 
 <tr>
 
-<td>Golden Sunset.jpg</td>
+<td colspan="6" class="empty-row">
 
-<td>Nature</td>
-
-<td>Landscape</td>
-
-<td>231</td>
-
-<td>
-
-<button>Edit</button>
-
-<button>Delete</button>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>Forest Walk.jpg</td>
-
-<td>Nature</td>
-
-<td>Forest</td>
-
-<td>142</td>
-
-<td>
-
-<button>Edit</button>
-
-<button>Delete</button>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>Night City.jpg</td>
-
-<td>Street</td>
-
-<td>Night</td>
-
-<td>89</td>
-
-<td>
-
-<button>Edit</button>
-
-<button>Delete</button>
+No images uploaded yet.
 
 </td>
 
@@ -261,34 +471,132 @@ Alec<span>World</span>
 
 </div>
 
-</main>
+<!-- Albums -->
 
-<footer>
+<div class="tab-content" id="albums">
 
-<div class="footer-logo">
+<div class="table-container">
 
-Alec<span>World</span>
+<table>
+
+<thead>
+
+<tr>
+
+<th>Album</th>
+
+<th>Photos</th>
+
+<th>Date</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="albumsTable">
+
+<tr>
+
+<td colspan="4" class="empty-row">
+
+No albums created.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 </div>
 
+</div>
+
+<!-- Categories -->
+
+<div class="tab-content" id="categories">
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Category</th>
+
+<th>Photos</th>
+
+<th>Date</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="categoriesTable">
+
+<tr>
+
+<td colspan="4" class="empty-row">
+
+No categories created.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="dashboard-footer">
+
 <p>
 
-AlecWorld Admin Dashboard
+© 2026 AlecWorld • Photography Dashboard
 
 </p>
 
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</div>
+
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
 
 <script src="js/supabase.js"></script>
-  <script src="js/main.js"></script>
 
-<script src="https://unpkg.com/@supabase/supabase-js"></script>
-
-<script src="js/supabase.js"></script>
+<script src="js/main.js"></script>
 
 <script src="js/auth.js"></script>
-    <script src="js/logout.js"></script>
+
+<script src="js/logout.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
 </body>
 
 </html>
