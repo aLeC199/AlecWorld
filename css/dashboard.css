@@ -682,50 +682,96 @@ tbody tr:hover{
 
 }
 
-@media(max-width:768px){
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
 
-    .stats-grid,
-    .action-grid{
-        grid-template-columns:1fr;
+@media (max-width: 768px){
+
+    .dashboard-page{
+
+        padding:16px;
+
     }
 
-    .topbar{
-        padding:0 15px;
+    .welcome-card{
+
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+
+    }
+
+    .welcome-card .btn{
+
+        width:100%;
+        justify-content:center;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+
+    }
+
+    .dashboard-card{
+
+        padding:18px;
+
+    }
+
+    .action-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .content-header{
+
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+
     }
 
     .table-tabs{
+
         width:100%;
-        overflow:auto;
+        overflow-x:auto;
+        scrollbar-width:none;
+
     }
 
-    .tab-btn{
-        white-space:nowrap;
-    }
+    .table-tabs::-webkit-scrollbar{
 
-    thead{
         display:none;
+
     }
 
-    table,
-    tbody,
-    tr,
-    td{
-        display:block;
-        width:100%;
+    .table-container{
+
+        overflow-x:auto;
+
     }
 
-    tbody tr{
-        padding:20px;
-        border-bottom:1px solid var(--border);
+    .table-container table{
+
+        min-width:720px;
+
     }
 
-    tbody td{
-        border:none;
-        padding:8px 0;
+    .topbar{
+
+        padding:14px 18px;
+
     }
 
-    .table-actions{
-        margin-top:15px;
+    .search-wrapper{
+
+        display:none;
+
     }
 
-   }
+}
