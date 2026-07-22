@@ -112,9 +112,9 @@ async function loadImages() {
 
             <td>
 
-                <button>Edit</button>
+                <button class="edit-btn">Edit</button>
 
-                <button>Delete</button>
+                <button class="delete-btn">Delete</button>
 
             </td>
 
@@ -163,9 +163,9 @@ async function loadAlbums() {
 
             <td>
 
-                <button>Edit</button>
+                <button class="edit-btn">Edit</button>
 
-                <button>Delete</button>
+                <button class="delete-btn">Delete</button>
 
             </td>
 
@@ -214,9 +214,9 @@ async function loadCategories() {
 
             <td>
 
-                <button>Edit</button>
+                <button class="edit-btn">Edit</button>
 
-                <button>Delete</button>
+                <button class="delete-btn">Delete</button>
 
             </td>
 
