@@ -250,20 +250,20 @@
 }
 
 .dashboard-card{
-.dashboard-card{
-
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:18px;
     transition:.35s ease;
-
 }
 
 .dashboard-card:hover{
-
     transform:translateY(-8px);
-
     border-color:var(--primary);
-
     box-shadow:0 20px 45px rgba(0,0,0,.35);
-
 }
 
 .card-icon{
@@ -322,45 +322,42 @@
 }
 
 .action-card{
-
     position:relative;
-
     overflow:hidden;
-
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    transition:.35s ease;
+    color:inherit;
+    text-align:left;
+    cursor:pointer;
 }
 
 .action-card::before{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:linear-gradient(
         135deg,
         rgba(245,158,11,.06),
         transparent
     );
-
     opacity:0;
-
     transition:.35s;
-
 }
 
 .action-card:hover::before{
-
     opacity:1;
-
 }
 
 .action-card:hover{
-
     transform:translateY(-6px);
-
+    border-color:var(--primary);
 }
-
 .action-icon{
     width:60px;
     height:60px;
@@ -450,6 +447,13 @@
 
 .tab-content.active{
     display:block;
+}
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    min-width:900px;
 }
 
 /* ==========================================
@@ -590,19 +594,13 @@ tbody tr:hover{
 
 }
 .preview-img{
-
-    width:80px;
-
-    height:80px;
-
+    width:90px;
+    height:90px;
     object-fit:cover;
-
-    border-radius:12px;
-
+    border-radius:14px;
     border:1px solid var(--border);
-
-    transition:.3s ease;
-
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 .preview-img:hover{
@@ -681,7 +679,28 @@ tbody tr:hover{
     }
 
 }
+@keyframes fadeUp{
 
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.dashboard-card,
+.action-card,
+.content-card,
+.welcome-card{
+
+    animation:fadeUp .45s ease;
+
+}
 /* ==========================================
    MOBILE RESPONSIVE
 ========================================== */
