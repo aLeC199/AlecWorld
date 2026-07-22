@@ -23,7 +23,7 @@ async function loadAlbums() {
         .from("albums")
         .select("*")
         .order("name");
-
+alert("Albums: " + JSON.stringify(data));
     album.innerHTML = '<option value="">Select Album</option>';
 
     if (error) {
@@ -55,7 +55,7 @@ async function loadCategories() {
         .from("categories")
         .select("*")
         .order("name");
-
+alert("Categories: " + JSON.stringify(data));
     category.innerHTML = '<option value="">Select Category</option>';
 
     if (error) {
