@@ -250,20 +250,20 @@
 }
 
 .dashboard-card{
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:25px;
-    display:flex;
-    align-items:center;
-    gap:18px;
-    transition:.3s;
+.dashboard-card{
+
+    transition:.35s ease;
+
 }
 
 .dashboard-card:hover{
+
     transform:translateY(-8px);
+
     border-color:var(--primary);
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
 }
 
 .card-icon{
@@ -322,23 +322,43 @@
 }
 
 .action-card{
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:28px;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:15px;
-    transition:var(--transition);
-    cursor:pointer;
-    color:inherit;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.action-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(245,158,11,.06),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.action-card:hover::before{
+
+    opacity:1;
+
 }
 
 .action-card:hover{
-    transform:translateY(-8px);
-    border-color:var(--primary);
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    transform:translateY(-6px);
+
 }
 
 .action-icon{
@@ -415,6 +435,7 @@
 .tab-btn:hover{
     border-color:var(--primary);
     color:var(--primary);
+       transform:translateY(-2px);
 }
 
 .tab-btn.active{
@@ -435,10 +456,18 @@
    TABLE
 ========================================== */
 
-.table-container{
-    overflow-x:auto;
+.table-container tbody tr{
+
+    transition:.3s ease;
+
 }
 
+.table-container tbody tr:hover{
+
+    background:rgba(255,255,255,.03);
+
+}
+   
 table{
     width:100%;
     border-collapse:collapse;
@@ -484,39 +513,103 @@ tbody tr:hover{
     gap:10px;
 }
 
-.edit-btn,
-.delete-btn{
-    width:38px;
-    height:38px;
+/* ==========================================
+   TABLE ACTION BUTTONS
+========================================== */
+
+.action-buttons{
     display:flex;
     align-items:center;
-    justify-content:center;
+    gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+
     border:none;
+
+    padding:10px 16px;
+
     border-radius:10px;
+
     cursor:pointer;
-    transition:var(--transition);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
 }
 
 .edit-btn{
-    background:rgba(245,158,11,.15);
-    color:var(--primary);
+
+    background:rgba(59,130,246,.12);
+
+    color:#60a5fa;
+
+    border:1px solid rgba(59,130,246,.3);
+
 }
 
 .edit-btn:hover{
-    background:var(--primary);
-    color:#111;
+
+    background:#3b82f6;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
 }
 
 .delete-btn{
-    background:rgba(239,68,68,.15);
-    color:#ef4444;
+
+    background:rgba(239,68,68,.12);
+
+    color:#f87171;
+
+    border:1px solid rgba(239,68,68,.3);
+
 }
 
 .delete-btn:hover{
+
     background:#ef4444;
+
     color:#fff;
+
+    transform:translateY(-2px);
+
+}
+.preview-img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+    transition:.3s ease;
+
 }
 
+.preview-img:hover{
+
+    transform:scale(1.08);
+
+}
 /* ==========================================
    FOOTER
 ========================================== */
